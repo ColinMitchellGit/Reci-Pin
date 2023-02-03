@@ -1,4 +1,4 @@
-const url = 'https://largeproj.herokuapp.com/api/';
+const url = 'https://recipin.onrender.com/api/';
 
 export default function URL ()
 {

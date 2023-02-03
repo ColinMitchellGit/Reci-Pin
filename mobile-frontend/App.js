@@ -17,7 +17,7 @@ function LandingPage()
 {
   return(
     <Tab.Navigator>
-      <Tab.Screen name= "Main" component={Main} options={{title: "Main"}}/> 
+      <Tab.Screen name= "Landing" component={Main} options={{title: "Landing"}}/> 
     </Tab.Navigator>
   )
 }

@@ -108,7 +108,7 @@ const successPage = `<!DOCTYPE html>
                             <h1>Congrats. You're verified!<br>Are you hungy? I am.</h1>
                         </div>
                         <div class="buttonContainer">
-                            <a href="https://reci-pin.herokuapp.com/">Back to home</a>
+                            <a href="https://recipin.onrender.com/">Back to home</a>
                         </div>
                     </div>
                </div>
@@ -138,7 +138,7 @@ app.set('port', (process.env.PORT || 5000));
 
 // Base URL
 // TODO: make this get heroku or localhost based on prod/local
-const baseURL = (process.env.NODE_ENV === "production") ? "https://reci-pin.herokuapp.com" : "http://localhost:5000";
+const baseURL = (process.env.NODE_ENV === "production") ? "https://recipin.onrender.com" : "http://localhost:5000";
 
 // Connecting to the MongoDB database
 const MongoClient = require('mongodb').MongoClient;

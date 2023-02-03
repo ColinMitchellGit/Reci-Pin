@@ -32,8 +32,8 @@
         submitRecipe: function(country, directions, recipeTitle, ingredients, desc, picture, coordinateX, coordinateY, id, production)
         {
             console.log(window.localStorage.getItem('pic'))
-            const app_name = 'reci-pin';
-            let route = 'https://reci-pin.herokuapp.com/api/createRecipe';
+            const app_name = 'recipin';
+            let route = 'https://recipin.onrender.com/api/createRecipe';
 
             if (!production)
                 route = 'http://localhost:5000/api/createRecipe';

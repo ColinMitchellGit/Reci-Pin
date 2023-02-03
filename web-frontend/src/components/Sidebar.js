@@ -24,11 +24,11 @@ function OffCanvasExample(props) {
   const getUserRecipes = async (event) => {
     // prevents the form from refreshing the page
 
-    const app_name = 'reci-pin';
+    const app_name = 'recipin';
     function buildPath(route)
     {
         if (process.env.NODE_ENV === 'production')
-            return 'https://' + app_name + '.herokuapp.com/' + route;
+            return 'https://' + app_name + '.onrender.com/' + route;
         else
             return 'http://localhost:5000/' + route;
     }
