@@ -232,12 +232,15 @@ app.post('/api/register/:platform', async (req, res) =>
 
     let verifyLink = "hostingLink/api/verify/usercode/username".replace("hostingLink", baseURL).replace("usercode", userCode).replace("username", username);
 
+    const expression = new RegExp("verifyLink", "g");
+    const expression2 = new RegExp("usercode", "g");
+
     // Set up web email content
-    let htmlToSend = emailPlatform["web"].replace("verifyLink", verifyLink);
+    let htmlToSend = emailPlatform["web"].replace(expression, verifyLink);
 
     // Set up mobile email content
     if (platform === "mobile")
-        htmlToSend = emailPlatform["mobile"].replace("verifyLink", verifyLink).replace("usercode", userCode);
+        htmlToSend = emailPlatform["mobile"].replace(expression, verifyLink).replace(expression2, userCode);
 
     // Construct email
     const msg = {
